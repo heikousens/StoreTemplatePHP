@@ -1,0 +1,405 @@
+/* CSS Personalizado */
+body{
+	padding-top: 56px;
+	background-color: #FFFFFF;
+	color: #888888;
+}
+
+section{
+	padding-top: 49px;
+	padding-bottom: 15px;
+	min-height: 100vh;
+}
+
+header{
+	width: 100%;
+	min-height: 10vh;
+	background-color: #FFFFFF;
+	font-family: Verdana;
+}
+
+footer {
+	background-image:url('../Imagens/tumblr_obgh6hLU0h1v8ll5wo1_500.jpg');
+	width:100%;
+	height: 38vh;
+	min-height:25vh;
+    max-height:100vh;
+	bottom:0;
+    left:0;
+    position:relative;
+    overflow:hidden;
+	background-attachment:absolute;
+    background-size:cover;
+    background-position:center;
+    color:#e79797;
+	}
+
+h1{
+	font-family: Verdana;
+	color: #EEB4B4;
+	letter-spacing: 1px;
+}
+
+h2{
+	font-family: Verdana; 
+	margin-left:10px; 
+	margin-right:10px; 
+	color: #EEB4B4; 
+	letter-spacing: 2px;
+}
+
+a:link {
+	color:#888888;
+   text-decoration: none;
+}
+
+a:visited {
+	color:#888888;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #EEB4B4;
+	text-decoration: none;
+}
+
+a:active {
+	color:#888888;
+	text-decoration: none;
+}
+
+h3{
+	font-family: Verdana;
+	color: #888888; 
+}
+
+.linhaCinza{
+	background: gray;
+}
+
+.bg-padding{
+	padding: 15px;
+}
+
+.areaIcones{
+	margin-top: 15px;
+}
+
+.alinhaIcone{
+	text-align: center;
+}
+
+.linhaCompra{
+	padding: 10px;
+	text-align: center;
+}
+
+.titulosCompra{
+	color: #fff;
+}
+
+.camposCompra{
+	height: 65px;
+}
+
+.botaoCompra{
+	height: 65px;
+}
+
+.botaoCompraLegenda{
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+.transbox {
+  margin-top: 15%;
+  margin-left: 36%;
+  position: absolute;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  opacity: 0.95; 
+}
+
+.banner-container{
+	margin-left: 0px;
+	position: relative;
+	z-index: 1;
+}
+
+.transbox p {
+  color: #838B83;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+.hvrbox,
+.hvrbox * {
+	box-sizing: border-box;
+}
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.hvrbox img {
+	max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+	opacity: 1;
+}
+.hvrbox .hvrbox-text {
+	text-align: center;
+	font-size: 18px;
+	text-shadow: 2px 2px 2px #000;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgba(179, 179, 179, 0.7);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+	display: block;
+}
+
+.hvrbox .hvrbox-layer_slidedown {
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.hvrbox:hover .hvrbox-layer_slidedown,
+.hvrbox.active .hvrbox-layer_slidedown {
+	-moz-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.btn-carrinho{
+	background-color: #EEB4B4;
+	color: #FFFFFF;
+}
+
+.btn-carrinho:hover{
+	background-color: #e38282;
+	color: #FFFFFF;
+}
+
+.btn-finalizar{
+	background-color: #d95959;
+	color: #FFFFFF;
+}
+
+.btn-finalizar:hover{
+	background-color: #bb2a2a;
+	color: #FFFFFF;
+}
+
+#navbar {
+    top:0;
+	position:fixed;
+	width:100%;
+	background: rgba(255,255,255,.95);
+    padding:10px;
+	z-index:25;
+	text-align:center;
+	border-bottom:1px solid #eee;
+	padding-bottom:0;
+	margin-bottom:0;
+	padding-top:7px;
+}
+#navbar a {
+	display:inline-block;
+    text-align:center;
+    color:#666;
+    font-size:10px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+#navbar i { 
+	margin-right:3px; 
+	}
+ 
+#navbar a:hover { 
+	color: #EEB4B4;
+	}
+	
+#navbar a:after {
+	content:'';
+	display:block;
+	background: #000000;
+	height:1px;
+	margin-bottom:-1px;
+	width:0px;
+	margin-top:5px;
+	background: #EEB4B4;
+	transition:0.4s ease-in-out;
+	-webkit-transition:0.4s ease-in-out;
+	-moz-transition:0.4s ease-in-out;
+}
+ 
+#navbar a:hover:after {
+width:100%;
+transition:0.4s ease-in-out;
+-webkit-transition:0.4s ease-in-out;
+-moz-transition:0.4s ease-in-out;
+ 
+}
+
+#topbar h1 {
+    display: block;
+    float: left;
+    font-size: calc(16px + 10px);
+    font-weight: 700;
+    line-height: calc(20px + 10px);
+    letter-spacing: 5px;
+    color: #888888;
+	font-family: Verdana;
+}
+
+#topbar h1:after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    display: block;
+    float: right;
+    margin: 0 10px 0 12px;
+    margin-top: calc(20px/2 + 4px);
+    background-color: #999999;
+    opacity: 0.3;
+}
+
+#topbar a:hover{
+	color:#EEB4B4;
+	transition:0.4s ease-in-out;
+	-webkit-transition:0.4s ease-in-out;
+	-moz-transition:0.4s ease-in-out;
+	font-family: Verdana;
+}
+
+#topbar h2 {
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+    line-height: calc(20px + 10px);
+    color: #999999;
+    opacity: 0.7;
+	font-family: Verdana;
+}
+
+#dropdown a{
+	background-color: rgba(255,255,255,.1);
+}
+
+#dropdown a:hover{
+	background-color: rgba(255,255,255,.1);
+}
+
+#sidebar{
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-transform:uppercase;
+}
+
+
+
+
